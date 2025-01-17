@@ -1,0 +1,105 @@
+const { default: makeWASocket, useSingleFileAuthState, DisconnectReason } = require('@whiskeysockets/baileys');
+const { Boom } = require('@hapi/boom');
+const qrcode = require('qrcode-terminal');
+
+// Authentification
+const { state, saveState } = useSingleFileAuthState('./auth_info.json');
+
+// Initialisation du bot
+async function startBot() {
+    const sock = makeWASocket({
+        auth: state,
+        printQRInTerminal: true,
+    });
+
+    // Sauvegarde de l'état
+    sock.ev.on('creds.update', saveState);
+
+    // Gestion des déconnexions
+    sock.ev.on('connection.update', (update) => {
+        const { connection, lastDisconnect } = update;
+        if (connection === 'close') {
+            const shouldReconnect = (lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut);
+            console.log('Connection closed due to', lastDisconnect.error, ', reconnecting', shouldReconnect);
+            if (shouldReconnect) startBot();
+        } else if (connection === 'open') {
+            console.log('Bot connecté !');
+        }
+    });
+
+    // Réception des messages
+    sock.ev.on('messages.upsert', async ({ messages }) => {
+        const message = messages[0];
+        if (!message.message) return;
+
+        const from = message.key.remoteJid;
+        const isGroup = from.endsWith('@g.us');
+        const messageType = Object.keys(message.message)[0];
+        const text = message.message.conversation || message.message[messageType]?.caption || '';
+
+        // Commandes du bot
+        if (text.startsWith('!')) {
+            const command = text.slice(1).toLowerCase().split(' ')[0];
+            const args = text.split(' ').slice(1);
+
+            switch (command) {
+                case 'help':
+                    await sock.sendMessage(from, { text: 'Voici la liste des commandes :\n!help\n!ping\n!info\n!rules' });
+                    break;
+
+                case 'ping':
+                    await sock.sendMessage(from, { text: 'Pong 🏓!' });
+                    break;
+
+                case 'info':
+                    await sock.sendMessage(from, { text: `Ce bot est actif. Type: ${isGroup ? 'Groupe' : 'Privé'}` });
+                    break;
+
+                case 'rules':
+                    await sock.sendMessage(from, { text: '1. Pas de spam\n2. Respectez les membres\n3. Pas de contenu inapproprié' });
+                    break;
+
+                case 'joke':
+                    await sock.sendMessage(from, { text: 'Pourquoi les poissons travaillent-ils illégalement ? Parce qu’ils n’ont pas de permis de mer !' });
+                    break;
+
+                default:
+                    await sock.sendMessage(from, { text: `Commande inconnue : ${command}` });
+            }
+        }
+    });
+}
+
+// Lancer le bot
+startBot();
+import sqlite3
+
+def init_db():
+    conn = sqlite3.connect('sessions.db')
+    cursor = conn.cursor()
+    cursor.execute('''CREATE TABLE IF NOT EXISTS sessions (
+        phone_number TEXT PRIMARY KEY,
+        session_id TEXT,
+        state TEXT
+    )''')
+    conn.commit()
+    conn.close()
+
+def get_session(phone_number):
+    conn = sqlite3.connect('sessions.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM sessions WHERE phone_number = ?', (phone_number,))
+    session = cursor.fetchone()
+    conn.close()
+    return session
+
+def create_session(phone_number):
+    session_id = str(uuid.uuid4())
+    conn = sqlite3.connect('sessions.db')
+    cursor = conn.cursor()
+    cursor.execute('INSERT INTO sessions (phone_number, session_id, state) VALUES (?, ?, ?)',
+                   (phone_number, session_id, 'initial'))
+    conn.commit()
+    conn.close()
+
+# Appeler init_db() pour initialiser la base de données à chaque démarrage de l'application.
