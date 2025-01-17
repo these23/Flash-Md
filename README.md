@@ -1,11 +1,11 @@
-<h1 align="center"> 𝐓𝐇𝐄 𝐅𝐋𝐀𝐒𝐇 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄  </h1>
+<h1 align="center"> ð“ð‡ð„ Boy md ðŒð”ð‹ð“ðˆ ðƒð„ð•ðˆð‚ð„  </h1>
 <p align="center">  
 
 ***
   
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THANKS FOR CHOOSING +FLASH-MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+FRANCE+KING;RELEASED+22.2.2024" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THANKS FOR CHOOSING +FLASH-MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+jace+ligth;RELEASED+22.2.2024" alt="Typing SVG" /></a>
   </p>
-    <img alt="FLASH-MD" width="700" height="300" src="https://files.catbox.moe/tvo4g6.jpg">
+    <img alt="THE BOY MD" width="700" height="300" src="https://files.catbox.moe/tvo4g6.jpg">
 <p align="center">
 <p align="center">
 <a href="https://github.com/franceking1/Flash-Md"><img title="Author" src="https://img.shields.io/badge/FLASH_MD-black?style=for-the-badge&logo=github"></a>
@@ -20,7 +20,7 @@
 
 #### SETUP 
 
-***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/franceking1/Flash-Md/fork) It***
+***1.`First STAR ðŸŒŸ This Repo ` And Then [`FORK`](https://github.com/franceking1/Flash-Md/fork) It***
 
 ***2.`Get Session ID` by [`SCANING QR`](https://the-flash-scanner.onrender.com) Or [`PAIRING CODE`](https://king-france.vercel.app) or [`PAIR CODE 2`](https://the-flash-md-sessions.onrender.com/pair)***
 
@@ -42,7 +42,7 @@
 ***
 
 
-### DISCLAIMER 🛡 
+### DISCLAIMER ðŸ›¡ 
 - Copying or modying this script is not allowed! For we shall not offer any help if any error occur!
 
 ***
@@ -57,4 +57,4 @@
 - [***Fortunatus Mokaya***](https://github.com/Fortunatusmokaya) For several Cmds Addition.
 - [***Gifted Tech***](https://github.com/mouricedevs) For Genaral Help and Session Generation
 - [***Suhail Ser***](https://github.com/SuhailTechInfo) For Code encryption 
-- [***Luffy***](https://github.com/Luffy2ndAccount) For Providing a Base of **FLASH-MD**
+- [***Luffy***](https://github.com/Luffy2ndAccount) For Providing a Base of **the boy md**
