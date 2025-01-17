@@ -1,4 +1,4 @@
-<h1 align="center"> ð“ð‡ð„ Boy md ðŒð”ð‹ð“ðˆ ðƒð„ð•ðˆð‚ð„  </h1>
+<h1 align="center"> ðthe „ Boy md ðŒð”ð‹ð“ðˆ ðƒð„ð•ðˆð‚ð„  </h1>
 <p align="center">  
 
 ***
@@ -8,12 +8,12 @@
     <img alt="THE BOY MD" width="700" height="300" src="https://files.catbox.moe/tvo4g6.jpg">
 <p align="center">
 <p align="center">
-<a href="https://github.com/franceking1/Flash-Md"><img title="Author" src="https://img.shields.io/badge/FLASH_MD-black?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/franceking1/Flash-Md"><img title="Author" src="https://imghttps://files.catbox.moe/uyjb0b.jpg-black?style=for-the-badge&logo=github"></a>
 <p/>
 <p align="center">
 <a href="https://github.com/franceking1?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/franceking1?label=Followers&style=social"></a>
 <a href="https://github.com/franceking1/Flash-Md/stargazers/"><img title="STARS" src="https://https://files.catbox.moe/uyjb0b.jpg/the boy-Md?&style=social"></a>
-<a href="https://github.com/franceking1/Flash-Md/network/members"><img title="Forks" src="https://img.shields.io/github/forks/franceking1/Flash-Md?style=social"></a>
+<a href="https://github.com/franceking1/Flash-Md/network/members"><img title="Forks" src="https://imghttps://files.catbox.moe/uyjb0b.jpg?style=social"></a>
 <a href="https://github.com/franceking1/Flash-Md/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/franceking1/Flash-Md?label=Watching&style=social"></a>
   
 ***
