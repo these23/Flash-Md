@@ -1,0 +1,31 @@
+import sqlite3
+
+def init_db():
+    conn = sqlite3.connect('sessions.db')
+    cursor = conn.cursor()
+    cursor.execute('''CREATE TABLE IF NOT EXISTS sessions (
+        phone_number TEXT PRIMARY KEY,
+        session_id TEXT,
+        state TEXT
+    )''')
+    conn.commit()
+    conn.close()
+
+def get_session(phone_number):
+    conn = sqlite3.connect('sessions.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM sessions WHERE phone_number = ?', (phone_number,))
+    session = cursor.fetchone()
+    conn.close()
+    return session
+
+def create_session(phone_number):
+    session_id = str(uuid.uuid4())
+    conn = sqlite3.connect('sessions.db')
+    cursor = conn.cursor()
+    cursor.execute('INSERT INTO sessions (phone_number, session_id, state) VALUES (?, ?, ?)',
+                   (phone_number, session_id, 'initial'))
+    conn.commit()
+    conn.close()
+
+# Appeler init_db() pour initialiser la base de données à chaque démarrage de l'application.
